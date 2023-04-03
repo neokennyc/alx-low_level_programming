@@ -1,36 +1,25 @@
 #include "main.h"
+
 /**
- * _strspn - a function that gets the
- *           length of a prexif substring
+ * _strpbrk - function that searches a string for any of a set of bytes
  *
- * @s: pointer to string input
- * @accept: substring prefix to look for
+ * @s:first occurrence in the string
  *
- * Return: the number of bytes in the initial segment
-*/
-
-unsigned int _strspn(char *s, char *accept)
+ * @accept: matches one of the bytes, or @NULL if no such byte
+ *
+ * Return: a pointer to the byte
+ */
+char *_strpbrk(char *s, char *accept)
 {
-	int i, j, f;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		j = 0;
-		f = 1; /*flag status*/
-		while (accept[j] != '\0')
+	int i;
+		while (*s)
 		{
-			if (s[i] == accept[j])
+			for (i = 0; accept[i]; i++)
 			{
-				f = 0; /*success*/
-				break;
+				if (*s == accept[i])
+					return (s);
 			}
-			j++;
+			s++;
 		}
-		if (f == 1)
-			break;
-		i++;
-	}
-
-	return (i);
+	return (NULL);
 }
