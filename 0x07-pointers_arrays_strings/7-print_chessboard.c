@@ -1,20 +1,20 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_diagsums -  prints sums
- * @a: a pointer
- * @size: size
- */
-void print_diagsums(int *a, int size)
-{
-	int i, sum1 = 0, sum2 = 0;
+ * print_chessboard - prints chessboard.
+ * @a: matrix
+*/
 
-	for (i = 0; i < size; i++)
+void print_chessboard(char (*a)[8])
+{
+	int i, j;
+
+	for (i = 0; i < 8; i++)
 	{
-		sum1 += *(a + (size * i + i));
-		sum2 += *(a + (size * i + size - 1 - i));
+		for (j = 0; j < 8; j++)
+		{
+			_putchar(*(*(i + a) + j));
+		}
+	_putchar('\n');
 	}
-	printf("%d, ", sum1);
-	printf("%d\n", sum2);
 }
