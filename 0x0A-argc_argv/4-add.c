@@ -1,36 +1,41 @@
 #include <stdio.h>
-#include <ctype.h>
 #include <stdlib.h>
-
+#include <string.h>
+#include <ctype.h>
 /**
-* main - adds numbers.
-* @argc: number of arguments
-* @argv: list of params
-* Return: 1 if there's no number || 0 when success
-*/
+ * main - check the code for ALX
+ * Description: argc argv[]
+ * @argc: count
+ * @argv: vector
+ * Return: Always 0
+ */
 int main(int argc, char *argv[])
 {
-	int jk;
-	long result = 0;
+int count, i, sum, len;
+char *p;
 
-	if (argc == 1)
+sum = 0;
+if ((argc <  2))
+{
+	printf("0\n");
+}
+else
+{
+	for (count = 1; count < argc; count++)
 	{
-		printf("0\n");
-		return (1);
-	}
-
-	for (jk = 1; jk < argc; jk++)
-	{
-		if (isdigit(argv[jk]) != 0)
+		p = argv[count];
+		len = strlen(p);
+		for (i = 0; i < len; i++)
 		{
-			result += atoi(argv[jk]);
+			if ((isdigit(*(p + i)) == 0))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+		sum += atoi(argv[count]);
 	}
-	printf("%ld\n", result);
-	return (0);
+	printf("%d\n", sum);
+}
+return (0);
 }
