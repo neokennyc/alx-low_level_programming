@@ -8,9 +8,10 @@
  * Return: Always 0 (Success)
  */
 
-int main(int argc, char *argv[])
+int main(int argc, __noerr char *argv[])
 {
-	printf("%d\n", argc - 1);
+int i = argc;
+	printf("%d\n", i - 1);
 
 	return (0);
 }
