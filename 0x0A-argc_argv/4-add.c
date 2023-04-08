@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
 	for (jk = 1; jk < argc; jk++)
 	{
-		if (atoi(argv[jk]) != 0)
+		if (isdigit(argv[jk]) != 0)
 		{
 			result += atoi(argv[jk]);
 		}
