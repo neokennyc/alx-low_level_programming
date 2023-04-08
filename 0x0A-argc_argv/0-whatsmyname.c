@@ -4,7 +4,7 @@
  * main - function
  * @argc: offset count
  * @argv: offset value
- * Return: 0
+ * Return: zero to the function call
  */
 
 
