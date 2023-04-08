@@ -1,4 +1,4 @@
-#include "main.h"
+#include "studio.h"
 
 /**
  * main - Entry point
