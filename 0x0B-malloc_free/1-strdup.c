@@ -3,7 +3,7 @@
 
 /**
  * _strdup - Duplicate using malloc
- * @str: string  dub
+ * @s: string  dub
  * Return: Pointer to a the new duped string
  */
 
