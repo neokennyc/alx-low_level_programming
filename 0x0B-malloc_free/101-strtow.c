@@ -66,7 +66,10 @@ char **strtow(char *str)
             ptr++;
         }
         word_len = ptr - wordStartAdd;
-
+if (word_len == 0)
+{
+break;
+}
         words[i] = calloc(word_len + 1, sizeof(char));
         if (words[i] == NULL)
         {
