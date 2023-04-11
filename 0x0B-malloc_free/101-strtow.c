@@ -5,7 +5,9 @@
 /**
  * strtow - converts a substring to a pointer array
  * @str: pointer to string
+ *
  * Description: string array builder
+ *
  * Return: **word
  */
 char **strtow(char *str)
@@ -20,10 +22,11 @@ char **strtow(char *str)
     i = 0;
     j = 0;
     ptr = str;
+
     if (str == NULL || *str == '\0')
         return (NULL);
 
-    /*Trim last space in the input string*/
+    /* Trim last space in the input string */
     while (*ptr == ' ')
         ptr++;
 
@@ -47,6 +50,7 @@ char **strtow(char *str)
             ptr++;
         }
     }
+
     words = calloc(nows + 1, sizeof(char *));
     if (words == NULL)
         return (NULL);
@@ -65,11 +69,13 @@ char **strtow(char *str)
         {
             ptr++;
         }
+
         word_len = ptr - wordStartAdd;
-if (word_len == 0)
-{
-break;
-}
+        if (word_len == 0)
+        {
+            break;
+        }
+
         words[i] = calloc(word_len + 1, sizeof(char));
         if (words[i] == NULL)
         {
@@ -77,6 +83,7 @@ break;
             {
                 free(words[j]);
             }
+
             free(words);
             return (NULL);
         }
@@ -85,6 +92,7 @@ break;
         words[i][word_len] = '\0';
         i++;
     }
+
     words[i] = NULL;
     return (words);
 }
