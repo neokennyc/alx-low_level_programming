@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  * alloc_grid - create a matrix using malloc
- * @width: width 
+ * @width: width
  * @height: height
  *
  * Return: return a pointer or null
