@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * str_concat - concatenate two literals 
+ * str_concat - concatenate two literals
  * @src1: SRC1
  * @src2: SRC2
  * Return: pointer to the new concat string
