@@ -3,7 +3,7 @@
 #include "main.h"
 /**
  *create_array - creates strings of chars initializes it to a specific char
- *@size:size 
+ *@size:size
  *@c:character
  *
  *Return:Null or pointer to  array
