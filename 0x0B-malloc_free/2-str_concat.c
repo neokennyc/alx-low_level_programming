@@ -8,7 +8,7 @@
  * Return: pointer to the new concat string
  */
 
-char *str_concat(char *src1, char *src1)
+char *str_concat(char *src1, char *src2)
 {
 	char *a;
 	int i, j, c, d;
