@@ -2,15 +2,15 @@
 #include <stdlib.h>
 /**
  * alloc_grid - create a matrix using malloc
- * @width: width of the matrix
- * @height: height of the matrix
+ * @width: width 
+ * @height: height
  *
- * Return: return a pointer of pointer or null
+ * Return: return a pointer or null
  */
 int **alloc_grid(int width, int height)
 {
 	int i, j, a, b;
-	int **p;
+	int **d;
 
 	if (width <= 0 || height <= 0)
 	{
@@ -18,21 +18,21 @@ int **alloc_grid(int width, int height)
 	}
 	else
 	{
-		p = (int **) malloc(height * sizeof(int *));
+		d = (int **) malloc(height * sizeof(int *));
 		/* we have to make a malloc per pointer*/
-		if (!p)
+		if (!d)
 		{
-			free(p);
+			free(d);
 			return (NULL);
 		}
 		for (i = 0; i < height; i++)
 		{
-			p[i] = (int *) malloc(width * sizeof(int));
-			if (!p[i])
+			d[i] = (int *) malloc(width * sizeof(int));
+			if (!d[i])
 			{
 				for (j = 0; j <= i; j++)
-					free(p[j]);
-				free(p);
+					free(d[j]);
+				free(d);
 				return (NULL);
 			}
 		}
@@ -40,9 +40,9 @@ int **alloc_grid(int width, int height)
 		{
 			for (b = 0; b < width; b++)
 			{
-				p[a][b] = 0;
+				d[a][b] = 0;
 			}
 		}
-		return (p);
+		return (d);
 	}
 }
