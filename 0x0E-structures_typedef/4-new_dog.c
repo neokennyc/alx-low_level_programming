@@ -72,3 +72,4 @@ if (mydog->owner == NULL)
 mydog->age = age;
 
 return (mydog)
+}
