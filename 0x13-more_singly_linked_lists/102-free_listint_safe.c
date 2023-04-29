@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include "lists.h"
 /**
  * free_listint_safe - frees a listint_t linked list safely
  * @h: pointer to the head of the list
