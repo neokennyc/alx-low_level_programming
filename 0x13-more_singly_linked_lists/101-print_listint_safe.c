@@ -4,38 +4,37 @@
 #include <stdio.h>
 
 /**
- * print_listint_safe - prints a listint_t linked list.
- * @head: pointer to the start of the list
- *
- * Return: the number of nodes in the list
+ * print_listint_safe - =====
+ * @head: =====
+ * Return: the number of nodes
  */
 size_t print_listint_safe(const listint_t *head)
 {
-    const listint_t *visited[1024] = {NULL};
-    size_t count = 0, i;
+	const listint_t *visited[1024] = {NULL};
+	size_t count = 0, i;
 
-    while (head != NULL)
-    {
-        for (i = 0; i < count; i++)
-        {
-            if (head == visited[i])
-            {
-                printf("-> [%p] %d\n", (void *)head, head->n);
-                return (count);
-            }
-        }
+	while (head != NULL)
+	{
+		for (i = 0; i < count; i++)
+		{
+			if (head == visited[i])
+			{
+				printf("-> [%p] %d\n", (void *)head, head->n);
+				return (count);
+			}
+		}
 
-        visited[count++] = head;
-        printf("[%p] %d\n", (void *)head, head->n);
-        head = head->next;
+		visited[count++] = head;
+		printf("[%p] %d\n", (void *)head, head->n);
+		head = head->next;
 
-        if (count >= 1024)
-        {
-           
-            exit(98);
-        }
-    }
+		if (count >= 1024)
+		{
 
-    return (count);
+			exit(98);
+		}
+	}
+
+	return (count);
 }
 
