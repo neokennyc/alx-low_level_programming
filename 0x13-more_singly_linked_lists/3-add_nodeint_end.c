@@ -2,8 +2,7 @@
 /**
  * add_nodeint_end - adds a node at the tail
  * @head: pointer to the head
- * @n: the content of the node 
- *
+ * @n: the content of the node
  * Return: pointer to the new node, or NULL if it fails
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
