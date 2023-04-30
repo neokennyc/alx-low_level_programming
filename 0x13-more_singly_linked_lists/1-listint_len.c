@@ -9,6 +9,7 @@ size_t listint_len(const listint_t *head)
 {
 	const listint_t *tp;
 	unsigned int cnr = 0;
+
 	tp = head;
 	while (tp)
 	{
