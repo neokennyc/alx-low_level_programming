@@ -1,10 +1,5 @@
-Breadcrumbsalx-low_level_programming-1/0x13-more_singly_linked_lists
-/9-insert_nodeint.c
-File metadata and controls
 
-Code
 
-Blame
 #include "lists.h"
 #include <stdlib.h>
 /**
